@@ -4,6 +4,8 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
+      buttonType: '',
+      url: '',
     }
   }
 
@@ -33,17 +35,17 @@ class Header extends Component {
     .then(data => this.setState({requestedData: data}))
   }
 
-render() {
-return (
-  <div>
-    <h1>Swapi-box</h1>
-    <button className='faves'>Favorites</button>
-    <button onClick={this.handleClick}>people</button>
-    <button onClick={this.handleClick}>vehicles</button>
-    <button onClick={this.handleClick}>planets</button>
-  </div>
-  )
-}
+  render() {
+    return (
+      <div>
+        <h1>Swapi-box</h1>
+        <button className='faves'>Favorites</button>
+        <button onClick={this.handleClick}>people</button>
+        <button onClick={this.handleClick}>vehicles</button>
+        <button onClick={this.handleClick}>planets</button>
+      </div>
+    )
+  }
 }
 
 export default Header;
