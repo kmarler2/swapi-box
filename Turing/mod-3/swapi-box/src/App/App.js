@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import {   
-  fetchScroll} from './helper.js';
-import Header from './Header';
-import CardContainer from './CardContainer';
-import Scroll from './Scroll';
+import './styles.css';
+import { 
+  fetchPlanetsData, 
+  fetchPeopleData, 
+  fetchVehiclesData,  
+  fetchScrollData} from '../helper.js';
+import Header from '../Header/Header.js';
+// import CardContainer from '../CardContainer/CardContainer.js';
+import Scroll from '../Scroll/Scroll.js';
 
 class App extends Component {
   constructor(props) {
@@ -18,9 +22,9 @@ class App extends Component {
   }
 
   async fetchScroll() {
-    const filmData = await fetchScroll()
+    const filmInfo = await fetchScrollData()
     this.setState({
-      filmData 
+      filmInfo 
      })
   }
 
