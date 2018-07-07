@@ -1,13 +1,14 @@
 import React from 'react';
+import './styles.css'
 
-const Header = (props) => { 
+const Header = ({fetchPeopleData, fetchVehiclesData, fetchPlanetsData}) => { 
   return (
     <div className="header">
       <h1 className="title">SwapiBox</h1>
-      <button onClick={props.getPeople} className="people">People</button>
-      <button onClick={props.getVehicles} className="vehicles">Vehicles</button>
-      <button onClick={props.getPlanets} className="planets">Planets</button>
-      <button onClick={props.showFavorites} className="favorites">favorites</button>
+      <button className='faves'>Your Faves</button>
+      <button onClick={fetchPeopleData} className="people">People</button>
+      <button onClick={fetchVehiclesData} className="vehicles">Vehicles</button>
+      <button onClick={fetchPlanetsData} className="planets">Planets</button>
     </div>
     )
 }
