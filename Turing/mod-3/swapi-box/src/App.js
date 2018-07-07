@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Scroll from './Scroll.js'
-import './App.css';
-import Header from './Header.js';
-import Helper from './helper.js';
-import ApiCall from './ApiCall.js'
-import { scroll, people, planets, vehicles } from './helper.js';
+import {   
+  fetchScroll} from './helper.js';
+import Header from './Header';
+import CardContainer from './CardContainer';
+import Scroll from './Scroll';
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-      scrollText: {},
-      cards: [],
-      favorites: [],
+      favorites: []
     }
   }
 
-  displayCards = () => {
-      //fetch data based on which button was clicked
-      //set state  to data received
+  componentDidMount() {
+     this.fetchScroll();
+  }
+
+  async fetchScroll() {
+    const filmData = await fetchScroll()
+    this.setState({
+      filmData 
+     })
   }
 
   render() {
     return (
       <div className="App">
-      <Header />
-      <Scroll />
+        <Scroll filmInfo={this.state.filmInfo}/>
       </div>
     );
   }
