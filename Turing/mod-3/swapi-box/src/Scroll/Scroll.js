@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Scroll = ({filmInfo}) => {
+const SideBar = ({filmInfo}) => {
   return filmInfo ? 
       <div>
         <p>{filmInfo.crawl}</p>
@@ -10,4 +10,4 @@ const Scroll = ({filmInfo}) => {
       : ''
 }
 
-export default Scroll;
+export default SideBar;
