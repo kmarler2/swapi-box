@@ -1,1 +1,9 @@
-styles.css
+.scrollText {
+  width: 20%;
+  color: #FCFE01;
+  border: 1px solid #FCFE01;
+  padding: 2%;
+  display: inline-block;
+  background-color: black;
+  height: 93vh;
+}

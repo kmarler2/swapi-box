@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { 
-  fetchPlanetsData, 
-  fetchPeopleData, 
-  fetchVehiclesData,  
+  fetchPeopleData,  
   fetchScrollData} from '../helper.js';
 import Header from '../Header/Header.js';
 // import CardContainer from '../CardContainer/CardContainer.js';
@@ -32,6 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <Scroll filmInfo={this.state.filmInfo}/>
+        <Header />
       </div>
     );
   }
