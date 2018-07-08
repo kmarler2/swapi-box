@@ -1,11 +1,11 @@
 .header {
   display: inline-block;
   width: 71%;
-  background-image: url('../starWarsBackground.jpg');
-  border: 3px solid #FCFE01;
   float: right;
-  height: 100vh;
+  height: 250px;
   padding: 2%;
+  color: black;
+  border: 2px solid;
 }
 
 .title {

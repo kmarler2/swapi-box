@@ -4,6 +4,6 @@
   border: 1px solid #FCFE01;
   padding: 2%;
   display: inline-block;
-  background-color: black;
-  height: 93vh;
+  background-image: url('../starWarsBackground.jpg');
+  height: 275px;
 }
