@@ -3,6 +3,7 @@ import './styles.css';
 
 const Card = ({individual}) => {
 
+console.log(individual)
   if(individual.species) {
         return <div className='card'> 
           <h2>Name: {individual.name}</h2>
