@@ -5,15 +5,17 @@ import './styles.css'
 const CardContainer = ({state}) => {
 
   const createIndivCard = (type) => {
-    return type.map(person => {
+    return type.map(item => {
       return <Card 
-          individual={person} 
-          key={person.name} 
+          item={item} 
+          key={item.name} 
         />
     })
-  }
+  } 
 
-  const type = state.type === 'people' ? state.people : []
+  const type = state.type === 'people' ? state.people :
+  state.type === 'vehicle' ? state.vehicle : 
+  state.type === 'planet' ? state.planet : []
 
   return (
       <div className="CardContainer">

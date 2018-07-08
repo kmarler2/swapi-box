@@ -6,5 +6,7 @@
   width: 20%;
   margin-bottom: 2%;
   margin-top: 2%;
+  padding: 2%;
   background-image: url('../starWarsBackground.jpg');
+  border: 1px solid #FCFE01;
 }

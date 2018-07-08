@@ -16,8 +16,8 @@ class App extends Component {
 
   componentDidMount() {
      this.fetchScroll();
-      this.fetchPeople()
-  }
+     this.fetchPlanets();
+    }
 
   async fetchScroll() {
     const filmInfo = await helper.fetchScrollData()
@@ -27,14 +27,33 @@ class App extends Component {
   }
 
   async fetchPeople() {
-    const people = await helper.fetchPeopleData()
+    const people = await helper.fetchPeopleData();
     this.setState({
       people: people
     })
     this.setState({
       type: 'people'
     })
-    console.log(this.state)
+  }
+
+    async fetchVehicles() {
+    const vehicle = await helper.fetchVehiclesData();
+    this.setState({
+      vehicle: vehicle
+    })
+    this.setState({
+      type: 'vehicle'
+    })
+  }
+
+    async fetchPlanets() {
+    const planet = await helper.fetchPlanetsData();
+    this.setState({
+      planet: planet
+    })
+    this.setState({
+      type: 'planet'
+    })
   }
 
   render() {
@@ -44,7 +63,9 @@ class App extends Component {
           filmInfo={this.state.filmInfo}
           />
         <Header 
-          fetchPeopleData={helper.fetchPeopleData}
+          fetchPeopleData={this.fetchPeopleData}
+          fetchVehiclesData={this.fetchVehiclesData}
+          fetchPlanetsData={this.fetchPlanetsData}
           />
         <CardContainer
           state={this.state} 
