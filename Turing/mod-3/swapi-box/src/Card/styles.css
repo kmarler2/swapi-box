@@ -1,0 +1,10 @@
+.card {
+  color: #FCFE01;
+  display: inline-block;
+  height: 220px;
+  margin-left: 3.6%;
+  width: 20%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background-image: url('../starWarsBackground.jpg');
+}
