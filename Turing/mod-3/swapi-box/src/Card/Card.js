@@ -1,14 +1,16 @@
 import React from 'react';
 import './styles.css';
 
-const Card = ({individual, toggleFavorites, isFavorite}) => {
+const Card = ({individual}) => {
 
-  const displayResidents = (residents) => {
-    return residents.map(resident => <li key={resident}>{resident}</li> )
+  if(individual.species) {
+        return <div> 
+          <h2>Name: {individual.name}</h2>
+          <p>Species: {individual.species}</p>
+          <p>Homeworld: {individual.planetName}</p>
+          <p>Homeworld Population: {individual.population}</p>
+        </div>
   }
-
-  const handleClick = () => {
-    toggleFavorites(individual)
-  }
+}
 
 export default Card;

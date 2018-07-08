@@ -1,8 +1,25 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../Card/Card';
+import './styles.css'
 
-// const CardContainer = () => {
+const CardContainer = ({state}) => {
 
+  const createIndivCard = (type) => {
+    return type.map(person => {
+      return <Card 
+          individual={person} 
+          key={person.name} 
+        />
+    })
+  }
 
+  const type = state.type === 'people' ? state.people : []
 
-// export default CardContainer;
+  return (
+      <div className="CardContainer">
+          {createIndivCard(type)}
+      </div>
+    )
+}
+
+export default CardContainer;
