@@ -27,6 +27,7 @@ const fetchPeopleData = async () => {
         const personInfo = {name, planetName, population, species}
         return personInfo;
       })
+      console.log('people')
       return Promise.all(peopleArr);
     } catch(error) {
       return error.message
@@ -36,9 +37,9 @@ const fetchPeopleData = async () => {
 const fetchHomeWorldData = async (person) => {
     const response = await fetch(person.homeworld);
     const planet = await response.json();
-    const planetName = planet.name;
-    const planetPopulation = planet.population;
-    return ({planetName, planetPopulation});
+    const Name = planet.name;
+    const Population = planet.population;
+    return ({Name, Population});
   }
 
 const fetchSpeciesData = async (person) => {
@@ -48,4 +49,6 @@ const fetchSpeciesData = async (person) => {
     return speciesName;
   }
 
-export {fetchPeopleData, fetchSpeciesData, fetchHomeWorldData, fetchScrollData}
+const helper = {fetchPeopleData, fetchSpeciesData, fetchHomeWorldData, fetchScrollData}
+
+export default helper;

@@ -1,9 +1,8 @@
 import React from 'react';
-import './styles.css'
 
 const Scroll = ({filmInfo}) => {
   return filmInfo ? 
-      <div className='scrollText'>
+      <div>
         <p>{filmInfo.crawl}</p>
         <h5>{filmInfo.filmTitle}</h5>
         <h5>{filmInfo.date}</h5>
