@@ -2,18 +2,18 @@
   display: inline-block;
   width: 71%;
   float: right;
-  height: 250px;
+  height: 275px;
   padding: 2%;
   color: black;
   border: 2px solid;
 }
 
 .title {
-  margin-left: 32%;
+  margin-left: 30%;
   color: #FCFE01;
   font-size: 80px;
-  text-align: center;
   display: inline-block;
+  margin-left: 12%;
 }
 
 button {
@@ -24,10 +24,10 @@ button {
 }
 
 .people {
-  margin-left: 25.5%;
+  margin-left: 6%;
 }
 
 .faves {
-  margin-left: 17%;
+  margin-left: 35%;
   font-size: 30px;
 }
