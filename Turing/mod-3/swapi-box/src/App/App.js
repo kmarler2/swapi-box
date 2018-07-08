@@ -34,6 +34,7 @@ class App extends Component {
     this.setState({
       type: 'people'
     })
+    console.log(this.state)
   }
 
   render() {

@@ -4,12 +4,11 @@ const fetchScrollData = async () => {
       const movie = await fetch(url);
       const response = await movie.json();
       const random = Math.floor(Math.random() * response.count);
-      const crawl = response.results[random].opening_crawl;
-      const filmTitle = response.results[random].title;
-      const date = response.results[random].release_date;
-      const filmData = {crawl, filmTitle, date};
-      
-      return filmData;
+      const obj = response.results;
+      const crawl = obj[random].opening_crawl;
+      const filmTitle = obj[random].title;
+      const date = obj[random].release_date;
+      return {crawl, filmTitle, date};
     } catch(error) {
       return error.message;
     }
@@ -27,7 +26,6 @@ const fetchPeopleData = async () => {
         const personInfo = {name, planetName, population, species}
         return personInfo;
       })
-      console.log('people')
       return Promise.all(peopleArr);
     } catch(error) {
       return error.message
@@ -37,9 +35,10 @@ const fetchPeopleData = async () => {
 const fetchHomeWorldData = async (person) => {
     const response = await fetch(person.homeworld);
     const planet = await response.json();
-    const Name = planet.name;
-    const Population = planet.population;
-    return ({Name, Population});
+    console.log(planet)
+    const planetName = planet.name;
+    const population = planet.population;
+    return {planetName, population};
   }
 
 const fetchSpeciesData = async (person) => {
