@@ -9,24 +9,27 @@ const Card =({item}) => {
 
   const Card = item.species ?
     <div className='card'> 
-      <h2>name: {item.name}</h2>
-      <p>species: {item.species}</p>
-      <p>Homeworld: {item.planetName}</p>
-      <p>population: {item.population}</p>
+      <h1>name: {item.name}</h1>
+      <p className='cardP'>species: {item.species}</p>
+      <p className='cardP'>Homeworld: {item.planetName}</p>
+      <p className='cardP'>population: {item.population}</p>
+      <button className='favesbtn'>Add to faves!</button>
     </div> 
     : item.model ? 
       <div className='card'> 
-        <h2>name: {item.name}</h2>
-        <p>species: {item.model}</p>
-        <p>Homeworld: {item.vehicle_class}</p>
-        <p>population: {item.passengers}</p>
+        <h1>name: {item.name}</h1>
+        <p className='cardP'>species: {item.model}</p>
+        <p className='cardP'>Homeworld: {item.vehicle_class}</p>
+        <p className='cardP'>population: {item.passengers}</p>
+        <button className='favesbtn'>Add to faves!</button>
       </div> 
       : item.climate ?
         <div className='card'> 
-          <h2>name: {item.name}</h2>
-          <p>population: {item.population}</p>
-          <p>climate: {item.climate}</p>
-          <p>residents: {getResident(item.residents)}</p>
+          <h1>name: {item.name}</h1>
+          <p className='cardP'>population: {item.population}</p>
+          <p className='cardP'>climate: {item.climate}</p>
+          <p className='cardP'>residents: {getResident(item.residents)}</p>
+          <button className='favesbtn'>Add to faves!</button>
         </div> : '';
   return Card;
 };

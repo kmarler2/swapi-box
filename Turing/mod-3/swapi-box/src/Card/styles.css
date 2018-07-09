@@ -2,11 +2,27 @@
   color: #FCFE01;
   display: inline-block;
   height: 220px;
-  margin-left: 3.6%;
-  width: 20%;
+  margin-left: 4.5%;
+  width: 25%;
   margin-bottom: 2%;
   margin-top: 2%;
-  padding: 2%;
+  padding: 1%;
   background-image: url('../starWarsBackground.jpg');
   border: 1px solid #FCFE01;
+  text-align: center;
+}
+
+.favesbtn {
+  margin: 0;
+  background-color: black;
+  border: 1px solid #FCFE01;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+.cardP {
+  font-size: 18px;
 }

@@ -2,14 +2,14 @@ import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
 
-const Header = ({fetchPeopleData, fetchVehiclesData, fetchPlanetsData}) => { 
+const Header = ({fetchPeople, fetchVehicles, fetchPlanets}) => { 
   return (
     <div className="header">
       <h1 className="title">SwapiBox</h1>
       <button className='faves'>Your Faves</button>
-      <button onClick={fetchPeopleData} className="people">People</button>
-      <button onClick={fetchVehiclesData} className="vehicles">Vehicles</button>
-      <button onClick={fetchPlanetsData} className="planets">Planets</button>
+      <button onClick={fetchPeople} className="people">People</button>
+      <button onClick={fetchVehicles} className="vehicles">Vehicles</button>
+      <button onClick={fetchPlanets} className="planets">Planets</button>
     </div>
   );
 };

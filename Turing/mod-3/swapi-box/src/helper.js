@@ -15,6 +15,7 @@ const fetchScrollData = async () => {
   }
 
 const fetchPeopleData = async () => {
+      console.log('people')
     try {  
       const url = 'https://swapi.co/api/people';
       const response = await fetch(url);
@@ -33,6 +34,7 @@ const fetchPeopleData = async () => {
   }
 
   const fetchVehiclesData = async () => {
+        console.log('vehicle')
     try {  
       const url = 'https://swapi.co/api/vehicles/';
       const response = await fetch(url);
@@ -53,6 +55,7 @@ const fetchPeopleData = async () => {
   }
 
 const fetchPlanetsData = async () => {
+          console.log('planet')
     try {
       const url = 'https://swapi.co/api/planets/';
       const response = await fetch(url);

@@ -1,6 +1,6 @@
 .header {
   display: inline-block;
-  width: 71%;
+  width: 63%;
   float: right;
   height: 275px;
   padding: 2%;
@@ -9,25 +9,31 @@
 }
 
 .title {
-  margin-left: 30%;
   color: #FCFE01;
   font-size: 80px;
   display: inline-block;
-  margin-left: 12%;
+  margin-left: 4%;
+  margin-top: 8%;
 }
 
 button {
-  font-size: 30px;
+  font-size: 25px;
   background-color: black;
   color: #FCFE01;
   margin-left: 10%;
+  margin-top: 2%;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.5;
 }
 
 .people {
-  margin-left: 6%;
+  margin-left: 0%;
 }
 
 .faves {
-  margin-left: 35%;
-  font-size: 30px;
+  margin-left: 40%;
+  font-size: 20px;
 }
