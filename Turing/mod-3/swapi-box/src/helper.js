@@ -63,7 +63,7 @@ const fetchPlanetsData = async () => {
         name, 
         population,
         climate,
-        residents,
+        residents
       })
     })
       return Promise.all(planetArr)

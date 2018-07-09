@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles.css'
+import './styles.css';
+import PropTypes from 'prop-types';
 
 const Header = ({fetchPeopleData, fetchVehiclesData, fetchPlanetsData}) => { 
   return (
@@ -10,7 +11,13 @@ const Header = ({fetchPeopleData, fetchVehiclesData, fetchPlanetsData}) => {
       <button onClick={fetchVehiclesData} className="vehicles">Vehicles</button>
       <button onClick={fetchPlanetsData} className="planets">Planets</button>
     </div>
-    )
-}
+  );
+};
+
+Header.propTypes = {
+  fetchPlanetsData: PropTypes.func.isRequired,
+  fetchVehiclesData: PropTypes.func.isRequired,
+  fetchPeopleData: PropTypes.func.isRequired
+};
 
 export default Header;
