@@ -3,10 +3,6 @@ import './styles.css';
 
 const Card =({item}) => {
 
-  const getResident = (residents) => {
-    return residents.map(resident => <li key={resident}>{resident}</li> );
-  };
-
   const Card = item.species ?
     <div className='card'> 
       <h1>name: {item.name}</h1>
@@ -28,7 +24,6 @@ const Card =({item}) => {
           <h1>name: {item.name}</h1>
           <p className='cardP'>population: {item.population}</p>
           <p className='cardP'>climate: {item.climate}</p>
-          <p className='cardP'>residents: {getResident(item.residents)}</p>
           <button className='favesbtn'>Add to faves!</button>
         </div> : '';
   return Card;
