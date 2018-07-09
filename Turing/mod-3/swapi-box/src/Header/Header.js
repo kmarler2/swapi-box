@@ -15,9 +15,9 @@ const Header = ({fetchPeople, fetchVehicles, fetchPlanets}) => {
 };
 
 Header.propTypes = {
-  fetchPlanetsData: PropTypes.func.isRequired,
-  fetchVehiclesData: PropTypes.func.isRequired,
-  fetchPeopleData: PropTypes.func.isRequired
+  fetchPlanets: PropTypes.func.isRequired,
+  fetchVehicles: PropTypes.func.isRequired,
+  fetchPeople: PropTypes.func.isRequired
 };
 
 export default Header;

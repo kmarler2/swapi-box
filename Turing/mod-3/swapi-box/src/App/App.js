@@ -17,7 +17,7 @@ class App extends Component {
     this.fetchScroll();
   }
 
-  async fetchScroll() {
+  fetchScroll = async () => {
     const filmInfo = await helper.fetchScrollData();
     this.setState({
       filmInfo
@@ -32,7 +32,6 @@ class App extends Component {
     this.setState({
       type: 'people'
     });
-    console.log(this.state)
   }
 
   fetchVehicles = async () => {
