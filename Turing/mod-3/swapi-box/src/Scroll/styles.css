@@ -1,9 +1,11 @@
 .scrollText {
-  width: 20%;
+  width: 23%;
   color: #FCFE01;
   border: 1px solid #FCFE01;
   padding: 2%;
   display: inline-block;
   background-image: url('../starWarsBackground.jpg');
   height: 300px;
+  margin-left: 4.5%;
+  margin-bottom: 2%;
 }
